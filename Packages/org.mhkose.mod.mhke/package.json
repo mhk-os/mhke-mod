@@ -1,0 +1,11 @@
+{
+  "name": "org.mhkose.mod.mhke",
+  "version": "1.0.0",
+  "displayName": "Moorhuhn Kart Extra",
+  "description": "Moorhuhn Kart Extra for Moorhuhn Kart: Open Source Edition: 10 tracks, karts, powerups and effects converted from Moorhuhn Kart and Moorhuhn Kart Extra.",
+  "unity": "6000.6",
+  "license": "MIT",
+  "author": {
+    "name": "MHK:OSE"
+  }
+}
