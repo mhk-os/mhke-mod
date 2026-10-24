@@ -1,0 +1,341 @@
+# Release: builds the ContentPack of this mod project for each BuildTarget and publishes a GitHub release with one zip
+# per target (<packid>-<target>-<sha7>.zip, holding the mod folder <packid>/ with the .mhkmod bundles and, on desktop
+# targets, Assets/) and mod.json (pack id, title, description, commit, sdkCommit, sdkBuild, sdkApi, targets), which the
+# game reads to find, install and update the mod. Runs on a push to main and by hand (force), with the SDK of the
+# game's GAME_REF (default main). Mods release on their own: after an SDK change that breaks mods, push or run this.
+# One release per mod commit and SDK: tag build-<sha7>-sdk<sdkBuild>, title "Build <n> | <sha7> | SDK <sdkBuild>",
+# sdkBuild = commits on the game's main at the SDK commit (the game's build number), sdkApi = the mod API level of the
+# SDK (ModSdk.ApiLevel). A game installs only releases with its own API level (games from before the API level only
+# those with sdkBuild up to their own build number) and lists an installed mod of another level as incompatible. A run
+# is skipped when the newest release of the same mod commit was built with an identical SDK folder
+# (Packages/org.mhkose.sdk), force rebuilds anyway. The SDK comes from a checkout of the game repository next to the
+# mod, so the file: paths in Packages/manifest.json resolve as on a modder's machine. Builds upload straight into a
+# draft release, the last job adds mod.json, publishes and removes caches superseded by a newer key for at least
+# three hours.
+# Secrets: UNITY_LICENSE (contents of a Unity Personal .ulf file), UNITY_EMAIL, UNITY_PASSWORD, UNITY_SERIAL (Pro only),
+# GAME_REPO_TOKEN (read access to the game repository) only while it is private. Variables (optional): GAME_REPO
+# (default mhk-os/mhk-os), GAME_REF (default main), LIBRARY_CACHE (false turns the Library cache off).
+name: Release
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Build even when a release of this mod commit has the same SDK
+        type: boolean
+        default: false
+
+concurrency:
+  group: release-${{ github.sha }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  GAME_REPO: ${{ vars.GAME_REPO || 'mhk-os/mhk-os' }}
+  GAME_REF: ${{ vars.GAME_REF || 'main' }}
+
+jobs:
+  resolve:
+    name: Mod commit and SDK
+    runs-on: ubuntu-latest
+    outputs:
+      sdk-commit: ${{ steps.sdk.outputs.commit }}
+      sdk7: ${{ steps.sdk.outputs.sha7 }}
+      sdk-build: ${{ steps.sdk.outputs.build }}
+      sdk-api: ${{ steps.sdk.outputs.api }}
+      sha7: ${{ steps.meta.outputs.sha7 }}
+      tag: ${{ steps.meta.outputs.tag }}
+      title: ${{ steps.meta.outputs.title }}
+      skip: ${{ steps.skip.outputs.skip }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          path: mod
+          fetch-depth: 0
+          lfs: false
+
+      # Every build uses the same SDK commit, also when GAME_REF moves during the run.
+      - uses: actions/checkout@v7
+        with:
+          repository: ${{ env.GAME_REPO }}
+          ref: ${{ env.GAME_REF }}
+          token: ${{ secrets.GAME_REPO_TOKEN || github.token }}
+          path: mhk-os
+          fetch-depth: 0
+          sparse-checkout: Packages/org.mhkose.sdk/Runtime/Modding/ModSdk.cs
+          sparse-checkout-cone-mode: false
+          lfs: false
+
+      - id: sdk
+        working-directory: mhk-os
+        run: |
+          commit=$(git rev-parse HEAD)
+          api=$(sed -nE 's/.*const int ApiLevel = ([0-9]+);.*/\1/p' Packages/org.mhkose.sdk/Runtime/Modding/ModSdk.cs)
+          if [ -z "$api" ]; then echo "::error::No ApiLevel in Packages/org.mhkose.sdk/Runtime/Modding/ModSdk.cs of $commit"; exit 1; fi
+          {
+            echo "commit=$commit"
+            echo "sha7=${commit::7}"
+            echo "build=$(git rev-list --count HEAD)"
+            echo "api=$api"
+          } >> "$GITHUB_OUTPUT"
+
+      - id: meta
+        working-directory: mod
+        env:
+          SDK_BUILD: ${{ steps.sdk.outputs.build }}
+        run: |
+          sha7="${GITHUB_SHA::7}"
+          {
+            echo "sha7=$sha7"
+            echo "tag=build-$sha7-sdk$SDK_BUILD"
+            echo "title=Build $(git rev-list --count HEAD) | $sha7 | SDK $SDK_BUILD"
+          } >> "$GITHUB_OUTPUT"
+
+      - id: skip
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SHA7: ${{ steps.meta.outputs.sha7 }}
+          FORCE: ${{ inputs.force || false }}
+        run: |
+          previous=$(gh release list --repo "$GITHUB_REPOSITORY" --limit 100 --json tagName,isDraft \
+            --jq ".[] | select(.isDraft | not) | .tagName | select(startswith(\"build-$SHA7-sdk\"))" | head -1)
+          skip=false
+          if [ -n "$previous" ] && [ "$FORCE" != true ]; then
+            sdk=$(gh release download "$previous" --repo "$GITHUB_REPOSITORY" --pattern mod.json --output - | jq -r .sdkCommit) || sdk=""
+            if [ -n "$sdk" ] && git -C mhk-os diff --quiet "$sdk" HEAD -- Packages/org.mhkose.sdk 2> /dev/null; then
+              echo "::notice::$previous was built from this mod commit with the same SDK folder (game $sdk), nothing to build"
+              skip=true
+            fi
+          fi
+          echo "skip=$skip" >> "$GITHUB_OUTPUT"
+
+  prepare:
+    name: Pack, LFS cache and draft release
+    needs: resolve
+    if: needs.resolve.outputs.skip != 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      lfs-key: ${{ steps.lfs.outputs.key }}
+      packs: ${{ steps.packs.outputs.packs }}
+      pack: ${{ steps.packs.outputs.pack }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          path: mod
+          lfs: false
+
+      # The ContentPack asset in the project's packages: one per mod, mod.json describes it.
+      - id: packs
+        working-directory: mod
+        run: |
+          mapfile -t packs < <(grep -rlx --include='*.asset' '  m_EditorClassIdentifier: MHK.Runtime::MHK.Modding.ContentPack' Packages | sort)
+          if [ "${#packs[@]}" -ne 1 ]; then echo "::error::Expected one ContentPack asset under Packages/, found ${#packs[@]}"; exit 1; fi
+          pack=$(python3 - "${packs[0]}" << 'PY'
+          import json, re, sys
+          lines = open(sys.argv[1], encoding="utf-8").read().splitlines()
+          def field(name):
+              for i, line in enumerate(lines):
+                  if line.startswith(f"  {name}:"):
+                      value = line[len(name) + 3:].strip()
+                      for more in lines[i + 1:]:
+                          if not more.startswith("    "):
+                              break
+                          value += " " + more.strip()
+                      if value.startswith("'"):
+                          return value[1:-1].replace("''", "'")
+                      if value.startswith('"'):
+                          return json.loads(value)
+                      return value
+              return ""
+          print(json.dumps({"packId": field("packId").lower(), "title": field("title"), "description": field("description")}))
+          PY
+          )
+          echo "packs=${packs[0]}" >> "$GITHUB_OUTPUT"
+          echo "pack=$pack" >> "$GITHUB_OUTPUT"
+          echo "$pack"
+
+      # LFS objects are downloaded once per set of binaries (key: the object list of this commit) and shared by all
+      # builds through the cache. A miss starts from the newest older set, so only changed files use LFS bandwidth.
+      - id: lfs
+        working-directory: mod
+        run: echo "key=lfs-$(git lfs ls-files --long | cut -d' ' -f1 | sort | sha256sum | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
+
+      - id: lfs-exact
+        uses: actions/cache/restore@v6
+        with:
+          path: mod/.git/lfs/objects
+          key: ${{ steps.lfs.outputs.key }}
+          lookup-only: true
+
+      - if: steps.lfs-exact.outputs.cache-hit != 'true'
+        uses: actions/cache/restore@v6
+        with:
+          path: mod/.git/lfs/objects
+          key: ${{ steps.lfs.outputs.key }}
+          restore-keys: lfs-
+
+      - if: steps.lfs-exact.outputs.cache-hit != 'true'
+        working-directory: mod
+        run: |
+          git lfs fetch
+          git lfs prune || echo "::warning::git lfs prune failed, the LFS cache keeps older objects"
+
+      - if: steps.lfs-exact.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v6
+        with:
+          path: mod/.git/lfs/objects
+          key: ${{ steps.lfs.outputs.key }}
+
+      - name: Draft release
+        working-directory: mod
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ needs.resolve.outputs.tag }}
+          TITLE: ${{ needs.resolve.outputs.title }}
+          PACK: ${{ steps.packs.outputs.pack }}
+          SDK_COMMIT: ${{ needs.resolve.outputs.sdk-commit }}
+          SDK_BUILD: ${{ needs.resolve.outputs.sdk-build }}
+          SDK_API: ${{ needs.resolve.outputs.sdk-api }}
+        run: |
+          if gh release view "$TAG" > /dev/null 2>&1; then exit 0; fi
+          notes="$RUNNER_TEMP/notes.txt"
+          {
+            echo "$(jq -r .title <<< "$PACK"), commit $GITHUB_SHA"
+            echo "Built with the SDK of $GAME_REPO $SDK_COMMIT (game build $SDK_BUILD, mod API level $SDK_API), for games with that API level."
+            echo
+            git log -1 --format=%B
+          } > "$notes"
+          gh release create "$TAG" --draft --target "$GITHUB_SHA" --title "$TITLE" --notes-file "$notes"
+
+  build:
+    name: Build ${{ matrix.target }}
+    needs: [resolve, prepare]
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [StandaloneOSX, StandaloneLinux64, StandaloneWindows64, Android]
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          path: mod
+          lfs: false
+
+      - uses: actions/cache/restore@v6
+        with:
+          path: mod/.git/lfs/objects
+          key: ${{ needs.prepare.outputs.lfs-key }}
+          fail-on-cache-miss: true
+
+      - working-directory: mod
+        run: git lfs checkout
+
+      - uses: actions/checkout@v7
+        with:
+          repository: ${{ env.GAME_REPO }}
+          ref: ${{ needs.resolve.outputs.sdk-commit }}
+          token: ${{ secrets.GAME_REPO_TOKEN || github.token }}
+          path: mhk-os
+          sparse-checkout: Packages/org.mhkose.sdk
+          sparse-checkout-cone-mode: true
+          lfs: false
+
+      - working-directory: mhk-os
+        run: git lfs pull --include "Packages/org.mhkose.sdk/**"
+
+      # Imported assets, one cache per BuildTarget. The repository cache holds 10 GB: set the repository variable
+      # LIBRARY_CACHE to false if these evict the LFS cache.
+      - if: vars.LIBRARY_CACHE != 'false'
+        uses: actions/cache@v6
+        with:
+          path: mod/Library
+          key: Library-${{ matrix.target }}-${{ hashFiles('mod/ProjectSettings/ProjectVersion.txt', 'mod/Packages/packages-lock.json') }}
+          restore-keys: Library-${{ matrix.target }}-
+
+      # Library/*.pid hold the Burst and ILPP process ids of the run that saved the cache. Container process ids
+      # repeat, and Unity kills the process with that id at startup, sometimes the editor itself (exit code 137).
+      - run: rm -f mod/Library/*.pid
+
+      - uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
+        with:
+          projectPath: mod
+          targetPlatform: ${{ matrix.target }}
+          buildMethod: MHK.Editor.Modding.ModBuildCli.Build
+          customParameters: -mhkPacks ${{ needs.prepare.outputs.packs }} -mhkOut Builds/Mods -mhkCommit ${{ github.sha }} -mhkSdkCommit ${{ needs.resolve.outputs.sdk-commit }}
+          versioning: None
+          allowDirtyBuild: true
+
+      - name: Package
+        env:
+          TARGET: ${{ matrix.target }}
+          ID: ${{ fromJSON(needs.prepare.outputs.pack).packId }}
+          SHA7: ${{ needs.resolve.outputs.sha7 }}
+        run: |
+          sudo chown -R "$(id -u):$(id -g)" mod/Builds
+          cd "mod/Builds/Mods/$TARGET"
+          if [ ! -f "$ID/$ID.mhkmod" ]; then echo "::error::$ID.mhkmod was not built for $TARGET"; exit 1; fi
+          zip -r -X -q "$RUNNER_TEMP/$ID-$TARGET-$SHA7.zip" "$ID"
+
+      - name: Upload to the draft release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ needs.resolve.outputs.tag }}
+          SHA7: ${{ needs.resolve.outputs.sha7 }}
+        run: gh release upload "$TAG" --repo "$GITHUB_REPOSITORY" "$RUNNER_TEMP"/*-"$SHA7".zip --clobber
+
+  publish:
+    name: Publish release
+    needs: [resolve, prepare, build]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: ${{ needs.resolve.outputs.tag }}
+    steps:
+      # mod.json lists one zip per BuildTarget of the build matrix, each must be in the release.
+      - name: mod.json
+        env:
+          PACK: ${{ needs.prepare.outputs.pack }}
+          SHA7: ${{ needs.resolve.outputs.sha7 }}
+          SDK7: ${{ needs.resolve.outputs.sdk7 }}
+          SDK_BUILD: ${{ needs.resolve.outputs.sdk-build }}
+          SDK_API: ${{ needs.resolve.outputs.sdk-api }}
+          TARGETS: StandaloneOSX StandaloneWindows64 StandaloneLinux64 Android
+        run: |
+          json="$RUNNER_TEMP/mod.json"
+          jq -n --argjson pack "$PACK" --arg commit "$SHA7" --arg sdkCommit "$SDK7" --argjson sdkBuild "$SDK_BUILD" \
+            --argjson sdkApi "$SDK_API" --arg targets "$TARGETS" \
+            '$pack + {commit: $commit, sdkCommit: $sdkCommit, sdkBuild: $sdkBuild, sdkApi: $sdkApi,
+              targets: ($targets | split(" ") | map({key: ., value: "\($pack.packId)-\(.)-\($commit).zip"}) | from_entries)}' > "$json"
+          cat "$json"
+          assets=$(gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name')
+          for zip in $(jq -r '.targets[]' "$json"); do
+            if ! grep -qxF "$zip" <<< "$assets"; then echo "::error::$zip is missing in $TAG"; exit 1; fi
+          done
+          gh release upload "$TAG" --repo "$GITHUB_REPOSITORY" "$json" --clobber
+
+      - run: gh release edit "$TAG" --repo "$GITHUB_REPOSITORY" --draft=false --latest
+
+      - name: Remove superseded caches
+        run: |
+          gh cache list --repo "$GITHUB_REPOSITORY" --limit 1000 --json id,key,createdAt,lastAccessedAt |
+            jq -r 'map(select(.key | test("-[0-9a-f]{64}$"))) | group_by(.key | sub("-[0-9a-f]{64}$"; ""))
+              | map(sort_by(.createdAt) | .[:-1][]) | .[]
+              | select((.lastAccessedAt | sub("\\.[0-9]+"; "") | fromdateiso8601) < (now - 10800)) | .id' |
+            while read -r id; do gh cache delete --repo "$GITHUB_REPOSITORY" "$id"; done
