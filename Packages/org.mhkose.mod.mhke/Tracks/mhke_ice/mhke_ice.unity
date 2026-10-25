@@ -364,7 +364,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5013146888897517032}
   m_Father: {fileID: 3373582072683567640}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &382874223
@@ -4266,7 +4267,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!33 &270215563386293010
 MeshFilter:
@@ -4576,7 +4577,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &441562918451636733
 Transform:
@@ -6814,7 +6815,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!1 &1422290635874827223
 GameObject:
@@ -7347,7 +7348,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &1687183934360646847
 Transform:
@@ -7772,7 +7773,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!1 &2021570945039256733
 GameObject:
@@ -7826,7 +7827,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &2031809844133408660
 Transform:
@@ -9860,7 +9861,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!1 &3714141681123915584
 GameObject:
@@ -9991,7 +9992,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!1 &3816596865316827148
 GameObject:
@@ -10491,7 +10492,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!23 &4051936177509855404
 MeshRenderer:
@@ -10631,7 +10632,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!23 &4163341790662869497
 MeshRenderer:
@@ -11086,7 +11087,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &4512927250960469602
 Transform:
@@ -11329,7 +11330,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!33 &4649709783329518203
 MeshFilter:
@@ -11617,7 +11618,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &4923905711275187011
 Transform:
@@ -11809,7 +11810,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!23 &5075451855339221693
 MeshRenderer:
@@ -12332,7 +12333,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &5479121665607227703
 Transform:
@@ -12943,7 +12944,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!1 &5857208141772254602
 GameObject:
@@ -13093,7 +13094,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!33 &5926882325286730922
 MeshFilter:
@@ -14559,7 +14560,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!33 &7352767594486310313
 MeshFilter:
@@ -16046,7 +16047,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!33 &8453003318918808522
 MeshFilter:
@@ -16867,7 +16868,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!1 &9158816747897529227
 GameObject:
@@ -16985,7 +16986,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -16994,3 +16995,118 @@ SceneRoots:
   - {fileID: 3373582072683567640}
   - {fileID: 2131647011}
   - {fileID: 7748674118661282232}
+--- !u!1 &836199948164256252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5013146888897517032}
+  - component: {fileID: 2437716557367478880}
+  m_Layer: 0
+  m_Name: Collapsing Bridge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5013146888897517032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836199948164256252}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 380235029}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2437716557367478880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836199948164256252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41c3d7ecd760423a91df619abd47f61e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MHK.Runtime::MHK.Race.CollapsingBridge
+  route: {fileID: 5414095848512376900}
+  gates:
+  - left: {x: -47.496, y: 0, z: 68.584}
+    right: {x: -56.384, y: 0, z: 65.706}
+  - left: {x: -40.026, y: 0, z: 65.658}
+    right: {x: -49.412, y: 0, z: 57.062}
+  - left: {x: -30.868, y: 0, z: 53.022}
+    right: {x: -42.004, y: 0, z: 47.212}
+  - left: {x: -25.664, y: 0, z: 44.494}
+    right: {x: -36.204, y: 0, z: 40.516}
+  sideMargin: 1
+  heightRange: 3
+  triggerWait: 1
+  dropWait: 0.5
+  fallAcceleration: 153
+  fallDepth: 42.5
+  segments:
+  - piece: {fileID: 8564391359676581603}
+    delay: 1
+  - piece: {fileID: 5605713314830786890}
+    delay: 0.83333
+  - piece: {fileID: 1506684716527847216}
+    delay: 0.76666
+  - piece: {fileID: 3472934939411026588}
+    delay: 0.63333
+  - piece: {fileID: 4225333184113274188}
+    delay: 0.63333
+  - piece: {fileID: 4326832898288158419}
+    delay: 0.56666
+  - piece: {fileID: 394649525027161635}
+    delay: 0.36666
+  - piece: {fileID: 9015869392709230126}
+    delay: 0.36666
+  - piece: {fileID: 7367857306389320756}
+    delay: 0
+  - piece: {fileID: 5801631085207185379}
+    delay: 0.03333
+  - piece: {fileID: 5358674907933537391}
+    delay: 0.16666
+  - piece: {fileID: 8308220475518928341}
+    delay: 0.16666
+  - piece: {fileID: 1349328305627556291}
+    delay: 0.03333
+  - piece: {fileID: 1062282429684080896}
+    delay: 0.5
+  - piece: {fileID: 2046303570944641034}
+    delay: 0.6
+  - piece: {fileID: 2834698918870907075}
+    delay: 0.7
+  - piece: {fileID: 4342066163026971955}
+    delay: 0.76666
+  - piece: {fileID: 4669159129498241649}
+    delay: 0.8
+  - piece: {fileID: 4836850668786319260}
+    delay: 0.86666
+  - piece: {fileID: 1376353988488215345}
+    delay: 1
+  - piece: {fileID: 7667611971011719978}
+    delay: 0.96666
+  sound: {fileID: 8300000, guid: f650a2a891be4e959c04a88062a43676, type: 3}
+  soundVolume: 1
+  soundRange:
+    fullVolumeDistance: 40
+    fadeDistance: 300
+    minVolume: 0.5
+    fade:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4

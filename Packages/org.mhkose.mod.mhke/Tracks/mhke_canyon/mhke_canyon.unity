@@ -364,7 +364,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 139751313046524419}
+  - {fileID: 4709017792876389485}
   m_Father: {fileID: 5960143583949042085}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &382874223
@@ -4329,7 +4331,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!33 &5800267946318733
 MeshFilter:
@@ -4890,7 +4892,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!33 &211784900268666205
 MeshFilter:
@@ -5060,7 +5062,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &308827588123121150
 Transform:
@@ -5474,7 +5476,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &459983735037603093
 Transform:
@@ -5609,7 +5611,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &516324421981034443
 Transform:
@@ -7369,7 +7371,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!23 &1198730391335909306
 MeshRenderer:
@@ -7588,7 +7590,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!23 &1366402832741733915
 MeshRenderer:
@@ -8237,7 +8239,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &1618925808120671264
 Transform:
@@ -9861,7 +9863,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!33 &2326386715429640975
 MeshFilter:
@@ -10366,7 +10368,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!33 &2568337920523041676
 MeshFilter:
@@ -10713,7 +10715,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!23 &2659386337657209611
 MeshRenderer:
@@ -11818,7 +11820,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &2930260869686327993
 Transform:
@@ -11851,7 +11853,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &2954095399767084015
 Transform:
@@ -12472,7 +12474,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &3230055675949201806
 Transform:
@@ -12976,7 +12978,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!114 &3430308642319431224
 MonoBehaviour:
@@ -13221,7 +13223,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!23 &3567862066485711673
 MeshRenderer:
@@ -14653,7 +14655,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &3810777145182463677
 Transform:
@@ -15169,7 +15171,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!23 &4087356320097706248
 MeshRenderer:
@@ -15889,7 +15891,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!1 &4320103219227901949
 GameObject:
@@ -16139,7 +16141,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!1 &4457149593607038047
 GameObject:
@@ -17203,7 +17205,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &4867197401354637660
 Transform:
@@ -17380,7 +17382,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!33 &4967233264232364289
 MeshFilter:
@@ -17455,7 +17457,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &5012639450409522755
 Transform:
@@ -17630,7 +17632,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!23 &5078396784021867696
 MeshRenderer:
@@ -17817,7 +17819,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!23 &5123742692185426516
 MeshRenderer:
@@ -19814,7 +19816,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!33 &5944350490988880498
 MeshFilter:
@@ -20635,7 +20637,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!1 &6255898853718638224
 GameObject:
@@ -21404,7 +21406,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!1 &6519506479357755373
 GameObject:
@@ -21473,7 +21475,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!1 &6537998385248295451
 GameObject:
@@ -21491,7 +21493,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!23 &6541556180221035138
 MeshRenderer:
@@ -21765,7 +21767,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &6725000389480575091
 Transform:
@@ -22058,7 +22060,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!33 &6940105507831325185
 MeshFilter:
@@ -23134,7 +23136,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!33 &7420241927171025190
 MeshFilter:
@@ -23168,7 +23170,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &7444717729692420255
 Transform:
@@ -23479,7 +23481,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!23 &7570290252811478042
 MeshRenderer:
@@ -23678,7 +23680,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!33 &7652421120007483711
 MeshFilter:
@@ -24355,7 +24357,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!33 &7963693906617776352
 MeshFilter:
@@ -24725,7 +24727,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!33 &8182894686978273645
 MeshFilter:
@@ -24992,7 +24994,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!33 &8347928207532066115
 MeshFilter:
@@ -26324,7 +26326,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &8930582517012946742
 Transform:
@@ -26380,7 +26382,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!33 &8964664165003290824
 MeshFilter:
@@ -26786,7 +26788,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 5
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!1 &9154319266226965804
 GameObject:
@@ -27015,3 +27017,229 @@ SceneRoots:
   - {fileID: 5960143583949042085}
   - {fileID: 2131647011}
   - {fileID: 6413716098072818163}
+--- !u!1 &5125609870796515246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 139751313046524419}
+  - component: {fileID: 5746032064859061743}
+  m_Layer: 0
+  m_Name: Collapsing Bridge 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &139751313046524419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5125609870796515246}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 380235029}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5746032064859061743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5125609870796515246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41c3d7ecd760423a91df619abd47f61e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MHK.Runtime::MHK.Race.CollapsingBridge
+  route: {fileID: 4238389303320376979}
+  gates:
+  - left: {x: -0.848, y: 0, z: -167.598}
+    right: {x: -1.752, y: 0, z: -162.484}
+  - left: {x: -16.578, y: 0, z: -170.496}
+    right: {x: -18.056, y: 0, z: -165.944}
+  - left: {x: -30.022, y: 0, z: -173.218}
+    right: {x: -31.318, y: 0, z: -168.698}
+  sideMargin: 1
+  heightRange: 3
+  triggerWait: 1
+  dropWait: 0.5
+  fallAcceleration: 153
+  fallDepth: 42.5
+  segments:
+  - piece: {fileID: 2495816406840297951}
+    delay: 1
+  - piece: {fileID: 744929752206141997}
+    delay: 0.83333
+  - piece: {fileID: 2885555430533823435}
+    delay: 0.76666
+  - piece: {fileID: 4392758618943601668}
+    delay: 0.63333
+  - piece: {fileID: 6760397959339757643}
+    delay: 0.63333
+  - piece: {fileID: 297015634935621334}
+    delay: 0.56666
+  - piece: {fileID: 1580137159335049391}
+    delay: 0.36666
+  - piece: {fileID: 3500887113140097582}
+    delay: 0.36666
+  - piece: {fileID: 393085809615074584}
+    delay: 0
+  - piece: {fileID: 3428719312937257811}
+    delay: 0.03333
+  - piece: {fileID: 4561268744372693489}
+    delay: 0.16666
+  - piece: {fileID: 1043629645876149321}
+    delay: 0.16666
+  - piece: {fileID: 7784965330913274218}
+    delay: 0.03333
+  - piece: {fileID: 1396461983885473952}
+    delay: 0.5
+  - piece: {fileID: 4682384271471636810}
+    delay: 0.6
+  - piece: {fileID: 3445161555325283863}
+    delay: 0.7
+  - piece: {fileID: 987027273922725805}
+    delay: 0.76666
+  - piece: {fileID: 6422295500518566009}
+    delay: 0.8
+  - piece: {fileID: 8647283601234916769}
+    delay: 0.86666
+  - piece: {fileID: 6521124812739767266}
+    delay: 1
+  - piece: {fileID: 2651808891949884852}
+    delay: 0.96666
+  sound: {fileID: 8300000, guid: 55e817fc5e55405f8e379fec20babe7f, type: 3}
+  soundVolume: 1
+  soundRange:
+    fullVolumeDistance: 40
+    fadeDistance: 300
+    minVolume: 0.5
+    fade:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+--- !u!1 &894510994803792449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4709017792876389485}
+  - component: {fileID: 4377926901843743377}
+  m_Layer: 0
+  m_Name: Collapsing Bridge 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4709017792876389485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894510994803792449}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 380235029}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4377926901843743377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894510994803792449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41c3d7ecd760423a91df619abd47f61e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MHK.Runtime::MHK.Race.CollapsingBridge
+  route: {fileID: 3423028751471063463}
+  gates:
+  - left: {x: -164.872, y: 0, z: -195.694}
+    right: {x: -165.824, y: 0, z: -190.542}
+  - left: {x: -178.51, y: 0, z: -198.154}
+    right: {x: -179.284, y: 0, z: -193.588}
+  - left: {x: -194.416, y: 0, z: -201.268}
+    right: {x: -195.262, y: 0, z: -196.796}
+  sideMargin: 1
+  heightRange: 3
+  triggerWait: 1
+  dropWait: 0.5
+  fallAcceleration: 153
+  fallDepth: 42.5
+  segments:
+  - piece: {fileID: 677978399785628080}
+    delay: 1
+  - piece: {fileID: 5904185870887468563}
+    delay: 0.83333
+  - piece: {fileID: 4899992075259796553}
+    delay: 0.76666
+  - piece: {fileID: 4685002166257746462}
+    delay: 0.63333
+  - piece: {fileID: 5686049230883745249}
+    delay: 0.63333
+  - piece: {fileID: 5922654209546306662}
+    delay: 0.56666
+  - piece: {fileID: 5222175610609351329}
+    delay: 0.36666
+  - piece: {fileID: 6441423504750003896}
+    delay: 0.36666
+  - piece: {fileID: 1618925808120671264}
+    delay: 0
+  - piece: {fileID: 2882290706947446671}
+    delay: 0.03333
+  - piece: {fileID: 4832948419500240168}
+    delay: 0.16666
+  - piece: {fileID: 179823774904362828}
+    delay: 0.16666
+  - piece: {fileID: 9185497375963353781}
+    delay: 0.03333
+  - piece: {fileID: 4817470432146368724}
+    delay: 0.5
+  - piece: {fileID: 2089733012129360787}
+    delay: 0.6
+  - piece: {fileID: 8709271900499335795}
+    delay: 0.7
+  - piece: {fileID: 2543630512027385698}
+    delay: 0.76666
+  - piece: {fileID: 4726351123431421497}
+    delay: 0.8
+  - piece: {fileID: 2027992595861106152}
+    delay: 0.86666
+  - piece: {fileID: 328359131337040211}
+    delay: 1
+  - piece: {fileID: 3727348716530004548}
+    delay: 0.96666
+  sound: {fileID: 8300000, guid: 55e817fc5e55405f8e379fec20babe7f, type: 3}
+  soundVolume: 1
+  soundRange:
+    fullVolumeDistance: 40
+    fadeDistance: 300
+    minVolume: 0.5
+    fade:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4

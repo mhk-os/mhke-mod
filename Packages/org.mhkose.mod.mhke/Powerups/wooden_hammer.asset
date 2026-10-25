@@ -21,6 +21,7 @@ MonoBehaviour:
   heldPrefab: {fileID: 7914602587012959981, guid: 27f2adefe761b485ba6d289d9deb0db1, type: 3}
   heldMount: 1
   charges: 3
+  battleCharges: 1
   useCooldown: 3
   excludeFromItemBoxes: 0
   weightByPosition:
