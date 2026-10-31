@@ -5334,6 +5334,23 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &836199948164256252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5013146888897517032}
+  - component: {fileID: 2437716557367478880}
+  m_Layer: 0
+  m_Name: Collapsing Bridge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &845982707428798199
 Transform:
   m_ObjectHideFlags: 0
@@ -6115,21 +6132,18 @@ MonoBehaviour:
     width: 17.352
     flags: 0
   - position: {x: 18.714, y: 0, z: 1.512}
-    width: 11.776
+    width: 6.4813123
     flags: 0
-  - position: {x: 20.14, y: 0, z: 3.466}
-    width: 8.612
-    flags: 0
-  - position: {x: 28.036, y: 0, z: 6.998}
+  - position: {x: 28.036, y: 0, z: 6.816404}
     width: 3.434
     flags: 0
-  - position: {x: 38.668, y: 0, z: 10.162}
+  - position: {x: 38.668, y: 0, z: 9.621816}
     width: 3.024
     flags: 0
-  - position: {x: 49.424, y: 0, z: 12.458}
+  - position: {x: 49.424, y: 0, z: 12.083928}
     width: 3.238
     flags: 0
-  - position: {x: 60.216, y: 0, z: 13.642}
+  - position: {x: 60.216, y: 0, z: 13.125909}
     width: 3.77
     flags: 0
   - position: {x: 70.95, y: 0, z: 13.018}
@@ -6161,9 +6175,6 @@ MonoBehaviour:
     flags: 0
   - position: {x: 157.042, y: 0, z: 0.64}
     width: 15.93
-    flags: 0
-  - position: {x: 160.764, y: 0, z: -1.744}
-    width: 17.928
     flags: 0
   - position: {x: 166.524, y: 0, z: -0.698}
     width: 10.65
@@ -6201,19 +6212,19 @@ MonoBehaviour:
   - position: {x: 267.826, y: 0, z: -63.304}
     width: 8.386
     flags: 0
-  - position: {x: 278.024, y: 0, z: -66.532}
+  - position: {x: 278.024, y: 0, z: -66.91321}
     width: 7.124
     flags: 0
-  - position: {x: 288.546, y: 0, z: -69.65}
+  - position: {x: 288.546, y: 0, z: -70.17226}
     width: 6.032
     flags: 0
-  - position: {x: 299.358, y: 0, z: -72.578}
+  - position: {x: 299.358, y: 0, z: -73.29062}
     width: 5.49
     flags: 0
-  - position: {x: 309.642, y: 0, z: -75.43}
+  - position: {x: 309.642, y: 0, z: -75.924706}
     width: 4.906
     flags: 0
-  - position: {x: 320.298, y: 0, z: -77.846}
+  - position: {x: 320.298, y: 0, z: -78.57824}
     width: 5.032
     flags: 0
   - position: {x: 330.01, y: 0, z: -82.264}
@@ -8339,6 +8350,89 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4
   m_IsActive: 1
+--- !u!114 &2437716557367478880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836199948164256252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41c3d7ecd760423a91df619abd47f61e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MHK.Runtime::MHK.Race.CollapsingBridge
+  route: {fileID: 5414095848512376900}
+  gates:
+  - left: {x: -47.496, y: 0, z: 68.584}
+    right: {x: -56.384, y: 0, z: 65.706}
+  - left: {x: -40.026, y: 0, z: 65.658}
+    right: {x: -49.412, y: 0, z: 57.062}
+  - left: {x: -30.868, y: 0, z: 53.022}
+    right: {x: -42.004, y: 0, z: 47.212}
+  - left: {x: -25.664, y: 0, z: 44.494}
+    right: {x: -36.204, y: 0, z: 40.516}
+  sideMargin: 1
+  heightRange: 3
+  triggerWait: 1
+  dropWait: 0.5
+  fallAcceleration: 153
+  fallDepth: 42.5
+  segments:
+  - piece: {fileID: 8564391359676581603}
+    delay: 1
+  - piece: {fileID: 5605713314830786890}
+    delay: 0.83333
+  - piece: {fileID: 1506684716527847216}
+    delay: 0.76666
+  - piece: {fileID: 3472934939411026588}
+    delay: 0.63333
+  - piece: {fileID: 4225333184113274188}
+    delay: 0.63333
+  - piece: {fileID: 4326832898288158419}
+    delay: 0.56666
+  - piece: {fileID: 394649525027161635}
+    delay: 0.36666
+  - piece: {fileID: 9015869392709230126}
+    delay: 0.36666
+  - piece: {fileID: 7367857306389320756}
+    delay: 0
+  - piece: {fileID: 5801631085207185379}
+    delay: 0.03333
+  - piece: {fileID: 5358674907933537391}
+    delay: 0.16666
+  - piece: {fileID: 8308220475518928341}
+    delay: 0.16666
+  - piece: {fileID: 1349328305627556291}
+    delay: 0.03333
+  - piece: {fileID: 1062282429684080896}
+    delay: 0.5
+  - piece: {fileID: 2046303570944641034}
+    delay: 0.6
+  - piece: {fileID: 2834698918870907075}
+    delay: 0.7
+  - piece: {fileID: 4342066163026971955}
+    delay: 0.76666
+  - piece: {fileID: 4669159129498241649}
+    delay: 0.8
+  - piece: {fileID: 4836850668786319260}
+    delay: 0.86666
+  - piece: {fileID: 1376353988488215345}
+    delay: 1
+  - piece: {fileID: 7667611971011719978}
+    delay: 0.96666
+  sound: {fileID: 8300000, guid: f650a2a891be4e959c04a88062a43676, type: 3}
+  soundVolume: 1
+  soundRange:
+    fullVolumeDistance: 40
+    fadeDistance: 300
+    minVolume: 0.5
+    fade:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
 --- !u!33 &2445910507697091416
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -9955,7 +10049,7 @@ Transform:
   m_GameObject: {fileID: 915275903847810886}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -82.97623, y: -6.072675, z: 109.93106}
+  m_LocalPosition: {x: -77.57, y: -5.12, z: 109}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10359,31 +10453,28 @@ MonoBehaviour:
   closed: 0
   showOnMinimap: 1
   nodes:
-  - position: {x: 18.714, y: 0, z: 1.512}
+  - position: {x: 6.980927, y: 0, z: -3.2108483}
     width: 11.776
     flags: 0
-  - position: {x: 29.664, y: 0, z: -5.386}
-    width: 3.062
+  - position: {x: 13.34501, y: 0, z: -6.8834705}
+    width: 7.419
     flags: 0
-  - position: {x: 39.748, y: 0, z: -3.906}
-    width: 1.39
+  - position: {x: 29.664, y: 0, z: -5.386}
+    width: 3.933756
+    flags: 0
+  - position: {x: 39.78681, y: 0, z: -3.9263031}
+    width: 2.6837087
     flags: 0
   - position: {x: 50.502, y: 0, z: -1.764}
-    width: 1.584
+    width: 2.8570309
     flags: 0
   - position: {x: 64.95, y: 0, z: 2.1}
-    width: 7.954
+    width: 4.4693384
     flags: 0
   - position: {x: 76.294, y: 0, z: 5.824}
-    width: 8.682
+    width: 6.3974633
     flags: 0
-  - position: {x: 77.478, y: 0, z: 7.184}
-    width: 12.088
-    flags: 0
-  - position: {x: 77.316, y: 0, z: 7.558}
-    width: 13.166
-    flags: 0
-  - position: {x: 82.306, y: 0, z: 10.6}
+  - position: {x: 91.29018, y: 0, z: 11.694485}
     width: 11.66
     flags: 0
 --- !u!33 &3986224297167349893
@@ -11728,6 +11819,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4
   m_IsActive: 1
+--- !u!4 &5013146888897517032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836199948164256252}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 380235029}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5015191269155196863
 Transform:
   m_ObjectHideFlags: 0
@@ -12273,9 +12379,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: MHK.Runtime::MHK.Race.TrackPath
   closed: 0
-  showOnMinimap: 1
+  showOnMinimap: 0
   nodes:
-  - position: {x: -85.452, y: 0, z: 92.904}
+  - position: {x: -85.60056, y: 0, z: 106.31415}
     width: 11.918
     flags: 0
   - position: {x: -63.77, y: 0, z: 83.842}
@@ -13679,7 +13785,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1a03737872414e878537083a7b01cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: MHK.Runtime::MHK.Race.TrackRuntime
-  path: {fileID: 1132775979805612258}
   startGrid:
   - {fileID: 845982707428798199}
   - {fileID: 4173682578596410652}
@@ -13693,10 +13798,6 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 4294963931
-  alternatePaths:
-  - {fileID: 5414095848512376900}
-  - {fileID: 3985444762891637929}
-  - {fileID: 7797858484680972596}
   farClip: 2000
   backgroundColor: {r: 0.1176, g: 0.3922, b: 0.8275, a: 1}
 --- !u!23 &6678473722449040885
@@ -15124,7 +15225,7 @@ MonoBehaviour:
   closed: 0
   showOnMinimap: 1
   nodes:
-  - position: {x: 166.524, y: 0, z: -0.698}
+  - position: {x: 149.99336, y: 0, z: 3.7698133}
     width: 10.65
     flags: 0
   - position: {x: 162.888, y: 0, z: -10.848}
@@ -15143,15 +15244,12 @@ MonoBehaviour:
     width: 3.482
     flags: 0
   - position: {x: 209.126, y: 0, z: -44.278}
-    width: 9.614
+    width: 7.0442452
     flags: 0
-  - position: {x: 211.388, y: 0, z: -43.58}
-    width: 13.244
+  - position: {x: 214.84991, y: 0, z: -45.0714}
+    width: 11.345013
     flags: 0
-  - position: {x: 211.608, y: 0, z: -43.226}
-    width: 14.286
-    flags: 0
-  - position: {x: 215.94, y: 0, z: -42.088}
+  - position: {x: 224.06819, y: 0, z: -47.491524}
     width: 16.45
     flags: 0
 --- !u!33 &7798318945378064290
@@ -16995,118 +17093,3 @@ SceneRoots:
   - {fileID: 3373582072683567640}
   - {fileID: 2131647011}
   - {fileID: 7748674118661282232}
---- !u!1 &836199948164256252
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5013146888897517032}
-  - component: {fileID: 2437716557367478880}
-  m_Layer: 0
-  m_Name: Collapsing Bridge
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5013146888897517032
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 836199948164256252}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 380235029}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2437716557367478880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 836199948164256252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41c3d7ecd760423a91df619abd47f61e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: MHK.Runtime::MHK.Race.CollapsingBridge
-  route: {fileID: 5414095848512376900}
-  gates:
-  - left: {x: -47.496, y: 0, z: 68.584}
-    right: {x: -56.384, y: 0, z: 65.706}
-  - left: {x: -40.026, y: 0, z: 65.658}
-    right: {x: -49.412, y: 0, z: 57.062}
-  - left: {x: -30.868, y: 0, z: 53.022}
-    right: {x: -42.004, y: 0, z: 47.212}
-  - left: {x: -25.664, y: 0, z: 44.494}
-    right: {x: -36.204, y: 0, z: 40.516}
-  sideMargin: 1
-  heightRange: 3
-  triggerWait: 1
-  dropWait: 0.5
-  fallAcceleration: 153
-  fallDepth: 42.5
-  segments:
-  - piece: {fileID: 8564391359676581603}
-    delay: 1
-  - piece: {fileID: 5605713314830786890}
-    delay: 0.83333
-  - piece: {fileID: 1506684716527847216}
-    delay: 0.76666
-  - piece: {fileID: 3472934939411026588}
-    delay: 0.63333
-  - piece: {fileID: 4225333184113274188}
-    delay: 0.63333
-  - piece: {fileID: 4326832898288158419}
-    delay: 0.56666
-  - piece: {fileID: 394649525027161635}
-    delay: 0.36666
-  - piece: {fileID: 9015869392709230126}
-    delay: 0.36666
-  - piece: {fileID: 7367857306389320756}
-    delay: 0
-  - piece: {fileID: 5801631085207185379}
-    delay: 0.03333
-  - piece: {fileID: 5358674907933537391}
-    delay: 0.16666
-  - piece: {fileID: 8308220475518928341}
-    delay: 0.16666
-  - piece: {fileID: 1349328305627556291}
-    delay: 0.03333
-  - piece: {fileID: 1062282429684080896}
-    delay: 0.5
-  - piece: {fileID: 2046303570944641034}
-    delay: 0.6
-  - piece: {fileID: 2834698918870907075}
-    delay: 0.7
-  - piece: {fileID: 4342066163026971955}
-    delay: 0.76666
-  - piece: {fileID: 4669159129498241649}
-    delay: 0.8
-  - piece: {fileID: 4836850668786319260}
-    delay: 0.86666
-  - piece: {fileID: 1376353988488215345}
-    delay: 1
-  - piece: {fileID: 7667611971011719978}
-    delay: 0.96666
-  sound: {fileID: 8300000, guid: f650a2a891be4e959c04a88062a43676, type: 3}
-  soundVolume: 1
-  soundRange:
-    fullVolumeDistance: 40
-    fadeDistance: 300
-    minVolume: 0.5
-    fade:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4

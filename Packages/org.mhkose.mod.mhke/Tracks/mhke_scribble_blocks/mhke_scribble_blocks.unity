@@ -5045,10 +5045,10 @@ MonoBehaviour:
   closed: 0
   showOnMinimap: 1
   nodes:
-  - position: {x: -34.138, y: 0, z: -48.839}
+  - position: {x: -39.37216, y: 0, z: -46.68391}
     width: 4.983
     flags: 0
-  - position: {x: -28.651, y: 0, z: -43.041}
+  - position: {x: -29.61971, y: 0, z: -43.041}
     width: 2.259
     flags: 0
   - position: {x: -26.983, y: 0, z: -43.015}
@@ -5057,10 +5057,7 @@ MonoBehaviour:
   - position: {x: -20.384, y: 0, z: -43.792}
     width: 6.44
     flags: 0
-  - position: {x: -20.249, y: 0, z: -44.152}
-    width: 7.003
-    flags: 0
-  - position: {x: -19.366, y: 0, z: -46.727}
+  - position: {x: -14.650897, y: 0, z: -46.884827}
     width: 10.736
     flags: 0
 --- !u!1 &158485789123806924
@@ -113340,7 +113337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1a03737872414e878537083a7b01cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: MHK.Runtime::MHK.Race.TrackRuntime
-  path: {fileID: 2753773193041551709}
   startGrid:
   - {fileID: 5586135992242063224}
   - {fileID: 3909520091796430434}
@@ -113354,12 +113350,6 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 4294963931
-  alternatePaths:
-  - {fileID: 8185748066364763978}
-  - {fileID: 7954751342600325321}
-  - {fileID: 9064791905969408424}
-  - {fileID: 152384638998351302}
-  - {fileID: 8703897103109542364}
   farClip: 1000
   backgroundColor: {r: 0.0471, g: 0.4275, b: 0.7098, a: 1}
 --- !u!1 &6123852187689912103
@@ -144353,22 +144343,19 @@ MonoBehaviour:
   closed: 0
   showOnMinimap: 1
   nodes:
-  - position: {x: 36.861, y: 0, z: 56.34}
+  - position: {x: 39.163315, y: 0, z: 60.858425}
     width: 5.679
     flags: 0
-  - position: {x: 42.933, y: 0, z: 50.721}
+  - position: {x: 42.933, y: 0, z: 52.679726}
     width: 2.319
     flags: 0
   - position: {x: 42.901, y: 0, z: 48.998}
     width: 2.295
     flags: 0
-  - position: {x: 42.309, y: 0, z: 42.645}
-    width: 7.35
-    flags: 0
   - position: {x: 41.956, y: 0, z: 42.535}
     width: 7.89
     flags: 0
-  - position: {x: 39.424, y: 0, z: 39.079}
+  - position: {x: 39.269543, y: 0, z: 36.1495}
     width: 10.975
     flags: 0
 --- !u!33 &7959608689667401297
@@ -158266,7 +158253,7 @@ MonoBehaviour:
   closed: 0
   showOnMinimap: 1
   nodes:
-  - position: {x: 39.07, y: 0, z: -49.337}
+  - position: {x: 35.250084, y: 0, z: -47.02463}
     width: 8.694
     flags: 0
   - position: {x: 45.525, y: 0, z: -43.08}
@@ -158277,9 +158264,6 @@ MonoBehaviour:
     flags: 0
   - position: {x: 56.787, y: 0, z: -43.851}
     width: 9.967
-    flags: 0
-  - position: {x: 56.848, y: 0, z: -44.216}
-    width: 10.388
     flags: 0
   - position: {x: 61.081, y: 0, z: -46.473}
     width: 10.044
