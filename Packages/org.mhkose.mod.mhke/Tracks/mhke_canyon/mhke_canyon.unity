@@ -431,6 +431,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3666793627611509958, guid: d24020bff4d61448f8cd86d53ce5ef8f, type: 3}
   m_PrefabInstance: {fileID: 382874223}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &448192065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 448192066}
+  - component: {fileID: 448192067}
+  m_Layer: 0
+  m_Name: Route 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &448192066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448192065}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8704119684912562587}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &448192067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448192065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac479d19cd964ba4986d0814d808bf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MHK.Runtime::MHK.Race.TrackPath
+  closed: 0
+  showOnMinimap: 1
+  nodes:
+  - position: {x: 29.22495, y: 0, z: -354.47882}
+    width: 9.938349
+    flags: 0
+  - position: {x: 31.15795, y: 0, z: -357.1629}
+    width: 6.2943473
+    flags: 0
+  - position: {x: 36.030514, y: 0, z: -357.2837}
+    width: 4.1403885
+    flags: 0
+  - position: {x: 43.148193, y: 0, z: -356.64206}
+    width: 3.7564428
+    flags: 0
+  - position: {x: 57.32324, y: 0, z: -350.71985}
+    width: 9.624244
+    flags: 0
 --- !u!1001 &642097947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4632,6 +4694,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3231453526695797437}
   m_Mesh: {fileID: -9167239465056408061, guid: ecfbd229ff1b44abe843fba598f0a146, type: 2}
+--- !u!4 &139751313046524419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5125609870796515246}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 380235029}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &162754456479464298
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6396,6 +6473,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 721582188859438292}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &894510994803792449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4709017792876389485}
+  - component: {fileID: 4377926901843743377}
+  m_Layer: 0
+  m_Name: Collapsing Bridge 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!33 &910610275556408867
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6923,7 +7017,7 @@ GameObject:
   - component: {fileID: 12759348300193905}
   - component: {fileID: 4238389303320376979}
   m_Layer: 0
-  m_Name: Route 2
+  m_Name: Route 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7508,7 +7602,7 @@ GameObject:
   - component: {fileID: 5415932425718123249}
   - component: {fileID: 3423028751471063463}
   m_Layer: 0
-  m_Name: Route 3
+  m_Name: Route 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12890,9 +12984,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: MHK.Runtime::MHK.Race.TrackPath
   closed: 0
-  showOnMinimap: 1
+  showOnMinimap: 0
   nodes:
-  - position: {x: -114.606, y: 0, z: -194.944}
+  - position: {x: -104.30856, y: 0, z: -183.8443}
     width: 12.6
     flags: 0
   - position: {x: -124.224, y: 0, z: -184.842}
@@ -12922,13 +13016,10 @@ MonoBehaviour:
   - position: {x: -234.976, y: 0, z: -205.054}
     width: 8.758
     flags: 0
-  - position: {x: -243.074, y: 0, z: -204.93}
-    width: 22.68
-    flags: 0
   - position: {x: -243.456, y: 0, z: -205.156}
     width: 23.694
     flags: 0
-  - position: {x: -251.794, y: 0, z: -193.844}
+  - position: {x: -250.17574, y: 0, z: -204.95586}
     width: 12.826
     flags: 0
 --- !u!33 &3424699313880516138
@@ -13632,8 +13723,8 @@ MonoBehaviour:
   closed: 1
   showOnMinimap: 1
   nodes:
-  - position: {x: 9.798, y: 0, z: 49.988}
-    width: 11.21
+  - position: {x: 11.207203, y: 0, z: 50.07341}
+    width: 11.635964
     flags: 1
   - position: {x: -3.674, y: 0, z: 50.626}
     width: 11.158
@@ -13759,37 +13850,25 @@ MonoBehaviour:
     width: 12.4
     flags: 0
   - position: {x: -446.226, y: 0, z: -103.91}
-    width: 23.436
+    width: 19.788164
     flags: 0
   - position: {x: -458.644, y: 0, z: -110.222}
-    width: 28.502
+    width: 25.292547
     flags: 0
   - position: {x: -466.198, y: 0, z: -119.388}
-    width: 27.284
-    flags: 0
-  - position: {x: -466.578, y: 0, z: -121.344}
-    width: 24.63
-    flags: 0
-  - position: {x: -467.928, y: 0, z: -123.768}
-    width: 23.66
+    width: 23.675016
     flags: 0
   - position: {x: -470.05, y: 0, z: -124.16}
-    width: 26.32
+    width: 21.39753
     flags: 0
   - position: {x: -472.81, y: 0, z: -138.382}
-    width: 22.542
+    width: 21.521307
     flags: 0
   - position: {x: -469.576, y: 0, z: -145.666}
-    width: 19.488
-    flags: 0
-  - position: {x: -468.314, y: 0, z: -146.844}
-    width: 17.942
-    flags: 0
-  - position: {x: -467.284, y: 0, z: -148.642}
-    width: 17.318
+    width: 17.495451
     flags: 0
   - position: {x: -467.56, y: 0, z: -150.3}
-    width: 19.06
+    width: 16.68156
     flags: 0
   - position: {x: -466.232, y: 0, z: -153.076}
     width: 19.138
@@ -13798,43 +13877,40 @@ MonoBehaviour:
     width: 22.992
     flags: 0
   - position: {x: -445.642, y: 0, z: -172.788}
-    width: 20.238
+    width: 18.129227
     flags: 0
   - position: {x: -442.13745, y: 0, z: -174.99}
     width: 19.25373
     flags: 2
   - position: {x: -434.234, y: 0, z: -179.956}
-    width: 17.034
+    width: 12.910231
     flags: 0
   - position: {x: -422.31, y: 0, z: -186.88}
-    width: 12.76
+    width: 10.78581
     flags: 0
   - position: {x: -411.964, y: 0, z: -195.902}
-    width: 13.74
+    width: 10.612309
     flags: 0
   - position: {x: -400.996, y: 0, z: -203.86}
-    width: 12.396
+    width: 10.854286
     flags: 0
   - position: {x: -390.528, y: 0, z: -212.516}
     width: 12.906
     flags: 0
   - position: {x: -380.184, y: 0, z: -221.394}
-    width: 13.846
+    width: 12.98652
     flags: 0
   - position: {x: -369.372, y: 0, z: -229.476}
-    width: 13.268
+    width: 12.363222
     flags: 0
   - position: {x: -358.522, y: 0, z: -237.626}
-    width: 12.88
+    width: 12.465078
     flags: 0
   - position: {x: -347.572, y: 0, z: -245.924}
     width: 12.636
     flags: 0
-  - position: {x: -340.49, y: 0, z: -251.888}
+  - position: {x: -340.49, y: 0, z: -251.01039}
     width: 13.416
-    flags: 0
-  - position: {x: -338.722, y: 0, z: -252.252}
-    width: 11.92
     flags: 0
   - position: {x: -336.668, y: 0, z: -253.71}
     width: 11.864
@@ -13905,20 +13981,20 @@ MonoBehaviour:
   - position: {x: -79.922, y: 0, z: -360.964}
     width: 10.254
     flags: 0
-  - position: {x: -66.822, y: 0, z: -358.278}
+  - position: {x: -66.822, y: 0, z: -358.59094}
     width: 6.53
     flags: 0
   - position: {x: -63.858, y: 0, z: -357.098}
-    width: 7.566
+    width: 5.117701
     flags: 0
   - position: {x: -53.428, y: 0, z: -356.196}
-    width: 2.486
+    width: 3.1441903
     flags: 0
-  - position: {x: -43.606, y: 0, z: -356.464}
-    width: 7.942
+  - position: {x: -46.69209, y: 0, z: -356.464}
+    width: 5.2967696
     flags: 0
-  - position: {x: -40.732, y: 0, z: -356.84}
-    width: 9.642
+  - position: {x: -42.20434, y: 0, z: -356.65198}
+    width: 6.198433
     flags: 0
   - position: {x: -27.37, y: 0, z: -359.068}
     width: 10.33
@@ -13937,9 +14013,6 @@ MonoBehaviour:
     flags: 0
   - position: {x: -6.902, y: 0, z: -360.996}
     width: 3.942
-    flags: 0
-  - position: {x: -5.452, y: 0, z: -360.126}
-    width: 5.38
     flags: 0
   - position: {x: -1.25, y: 0, z: -357.28}
     width: 10.798
@@ -14151,27 +14224,18 @@ MonoBehaviour:
   - position: {x: -74.658, y: 0, z: -190.022}
     width: 9.214
     flags: 0
-  - position: {x: -89.316, y: 0, z: -182.498}
-    width: 8.446
-    flags: 0
-  - position: {x: -90.446, y: 0, z: -182.594}
-    width: 8.576
-    flags: 0
-  - position: {x: -92.008, y: 0, z: -183.096}
+  - position: {x: -88.87373, y: 0, z: -183.096}
     width: 8.312
     flags: 0
   - position: {x: -96.83, y: 0, z: -183.26}
     width: 7.11
-    flags: 0
-  - position: {x: -100.878, y: 0, z: -183.458}
-    width: 8.708
-    flags: 0
-  - position: {x: -103.828, y: 0, z: -183.034}
+    flags: 2
+  - position: {x: -103.828, y: 0, z: -183.35454}
     width: 9.71
     flags: 0
   - position: {x: -107.560555, y: 0, z: -187.15858}
     width: 10.710843
-    flags: 2
+    flags: 0
   - position: {x: -114.606, y: 0, z: -194.944}
     width: 12.6
     flags: 0
@@ -14220,11 +14284,11 @@ MonoBehaviour:
   - position: {x: -248.462, y: 0, z: -212.506}
     width: 16.372
     flags: 0
+  - position: {x: -250.57996, y: 0, z: -203.17499}
+    width: 14.599
+    flags: 0
   - position: {x: -251.794, y: 0, z: -193.844}
     width: 12.826
-    flags: 0
-  - position: {x: -252.05, y: 0, z: -192.196}
-    width: 12.216
     flags: 0
   - position: {x: -252.84, y: 0, z: -180.608}
     width: 10.298
@@ -15702,19 +15766,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: MHK.Runtime::MHK.Race.TrackPath
   closed: 0
-  showOnMinimap: 1
+  showOnMinimap: 0
   nodes:
-  - position: {x: 44.836, y: 0, z: -165.426}
+  - position: {x: 55.225883, y: 0, z: -153.00238}
     width: 13.064
     flags: 0
   - position: {x: 38.664, y: 0, z: -157.094}
     width: 11.686
-    flags: 0
-  - position: {x: 35.832, y: 0, z: -157.726}
-    width: 12.394
-    flags: 0
-  - position: {x: 34.51, y: 0, z: -158.104}
-    width: 11.278
     flags: 0
   - position: {x: 34.104, y: 0, z: -157.648}
     width: 12.38
@@ -16038,6 +16096,87 @@ Transform:
   m_Children: []
   m_Father: {fileID: 721582188859438292}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4377926901843743377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894510994803792449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41c3d7ecd760423a91df619abd47f61e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MHK.Runtime::MHK.Race.CollapsingBridge
+  route: {fileID: 3423028751471063463}
+  gates:
+  - left: {x: -164.872, y: 0, z: -195.694}
+    right: {x: -165.824, y: 0, z: -190.542}
+  - left: {x: -178.51, y: 0, z: -198.154}
+    right: {x: -179.284, y: 0, z: -193.588}
+  - left: {x: -194.416, y: 0, z: -201.268}
+    right: {x: -195.262, y: 0, z: -196.796}
+  sideMargin: 1
+  heightRange: 3
+  triggerWait: 1
+  dropWait: 0.5
+  fallAcceleration: 153
+  fallDepth: 42.5
+  segments:
+  - piece: {fileID: 677978399785628080}
+    delay: 1
+  - piece: {fileID: 5904185870887468563}
+    delay: 0.83333
+  - piece: {fileID: 4899992075259796553}
+    delay: 0.76666
+  - piece: {fileID: 4685002166257746462}
+    delay: 0.63333
+  - piece: {fileID: 5686049230883745249}
+    delay: 0.63333
+  - piece: {fileID: 5922654209546306662}
+    delay: 0.56666
+  - piece: {fileID: 5222175610609351329}
+    delay: 0.36666
+  - piece: {fileID: 6441423504750003896}
+    delay: 0.36666
+  - piece: {fileID: 1618925808120671264}
+    delay: 0
+  - piece: {fileID: 2882290706947446671}
+    delay: 0.03333
+  - piece: {fileID: 4832948419500240168}
+    delay: 0.16666
+  - piece: {fileID: 179823774904362828}
+    delay: 0.16666
+  - piece: {fileID: 9185497375963353781}
+    delay: 0.03333
+  - piece: {fileID: 4817470432146368724}
+    delay: 0.5
+  - piece: {fileID: 2089733012129360787}
+    delay: 0.6
+  - piece: {fileID: 8709271900499335795}
+    delay: 0.7
+  - piece: {fileID: 2543630512027385698}
+    delay: 0.76666
+  - piece: {fileID: 4726351123431421497}
+    delay: 0.8
+  - piece: {fileID: 2027992595861106152}
+    delay: 0.86666
+  - piece: {fileID: 328359131337040211}
+    delay: 1
+  - piece: {fileID: 3727348716530004548}
+    delay: 0.96666
+  sound: {fileID: 8300000, guid: 55e817fc5e55405f8e379fec20babe7f, type: 3}
+  soundVolume: 1
+  soundRange:
+    fullVolumeDistance: 40
+    fadeDistance: 300
+    minVolume: 0.5
+    fade:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
 --- !u!4 &4392758618943601668
 Transform:
   m_ObjectHideFlags: 0
@@ -16703,6 +16842,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4709017792876389485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894510994803792449}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 380235029}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &4714713888585175714
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16867,26 +17021,26 @@ MonoBehaviour:
   closed: 0
   showOnMinimap: 1
   nodes:
-  - position: {x: -66.822, y: 0, z: -358.278}
-    width: 6.53
+  - position: {x: -66.81895, y: 0, z: -358.58942}
+    width: 8.939853
+    flags: 0
+  - position: {x: -65.842804, y: 0, z: -362.32965}
+    width: 6.6842046
     flags: 0
   - position: {x: -61.842, y: 0, z: -364.376}
-    width: 11.15
+    width: 3.445567
     flags: 0
   - position: {x: -53.692, y: 0, z: -363.962}
-    width: 2.532
+    width: 2.9407783
     flags: 0
-  - position: {x: -44.53, y: 0, z: -363.522}
-    width: 9.32
+  - position: {x: -44.53, y: 0, z: -363.18674}
+    width: 4.0547695
     flags: 0
   - position: {x: -36.5, y: 0, z: -362.58}
-    width: 17.11
+    width: 5.479119
     flags: 0
-  - position: {x: -36.414, y: 0, z: -361.756}
-    width: 17.6
-    flags: 0
-  - position: {x: -27.37, y: 0, z: -359.068}
-    width: 10.33
+  - position: {x: -19.470064, y: 0, z: -361.82922}
+    width: 4.309956
     flags: 0
 --- !u!33 &4767552253790006077
 MeshFilter:
@@ -17870,6 +18024,23 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &5125609870796515246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 139751313046524419}
+  - component: {fileID: 5746032064859061743}
+  m_Layer: 0
+  m_Name: Collapsing Bridge 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!33 &5132030806802955018
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -19342,6 +19513,87 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 5
   m_IsActive: 1
+--- !u!114 &5746032064859061743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5125609870796515246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41c3d7ecd760423a91df619abd47f61e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MHK.Runtime::MHK.Race.CollapsingBridge
+  route: {fileID: 4238389303320376979}
+  gates:
+  - left: {x: -0.848, y: 0, z: -167.598}
+    right: {x: -1.752, y: 0, z: -162.484}
+  - left: {x: -16.578, y: 0, z: -170.496}
+    right: {x: -18.056, y: 0, z: -165.944}
+  - left: {x: -30.022, y: 0, z: -173.218}
+    right: {x: -31.318, y: 0, z: -168.698}
+  sideMargin: 1
+  heightRange: 3
+  triggerWait: 1
+  dropWait: 0.5
+  fallAcceleration: 153
+  fallDepth: 42.5
+  segments:
+  - piece: {fileID: 2495816406840297951}
+    delay: 1
+  - piece: {fileID: 744929752206141997}
+    delay: 0.83333
+  - piece: {fileID: 2885555430533823435}
+    delay: 0.76666
+  - piece: {fileID: 4392758618943601668}
+    delay: 0.63333
+  - piece: {fileID: 6760397959339757643}
+    delay: 0.63333
+  - piece: {fileID: 297015634935621334}
+    delay: 0.56666
+  - piece: {fileID: 1580137159335049391}
+    delay: 0.36666
+  - piece: {fileID: 3500887113140097582}
+    delay: 0.36666
+  - piece: {fileID: 393085809615074584}
+    delay: 0
+  - piece: {fileID: 3428719312937257811}
+    delay: 0.03333
+  - piece: {fileID: 4561268744372693489}
+    delay: 0.16666
+  - piece: {fileID: 1043629645876149321}
+    delay: 0.16666
+  - piece: {fileID: 7784965330913274218}
+    delay: 0.03333
+  - piece: {fileID: 1396461983885473952}
+    delay: 0.5
+  - piece: {fileID: 4682384271471636810}
+    delay: 0.6
+  - piece: {fileID: 3445161555325283863}
+    delay: 0.7
+  - piece: {fileID: 987027273922725805}
+    delay: 0.76666
+  - piece: {fileID: 6422295500518566009}
+    delay: 0.8
+  - piece: {fileID: 8647283601234916769}
+    delay: 0.86666
+  - piece: {fileID: 6521124812739767266}
+    delay: 1
+  - piece: {fileID: 2651808891949884852}
+    delay: 0.96666
+  sound: {fileID: 8300000, guid: 55e817fc5e55405f8e379fec20babe7f, type: 3}
+  soundVolume: 1
+  soundRange:
+    fullVolumeDistance: 40
+    fadeDistance: 300
+    minVolume: 0.5
+    fade:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
 --- !u!33 &5746307693233777823
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -24321,7 +24573,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1a03737872414e878537083a7b01cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: MHK.Runtime::MHK.Race.TrackRuntime
-  path: {fileID: 3688336509479091141}
   startGrid:
   - {fileID: 5513093278823664978}
   - {fileID: 3002305386877482844}
@@ -24335,10 +24586,6 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 4294963931
-  alternatePaths:
-  - {fileID: 4765839766489978492}
-  - {fileID: 4238389303320376979}
-  - {fileID: 3423028751471063463}
   farClip: 2000
   backgroundColor: {r: 0.1647, g: 0.5373, b: 0.8, a: 1}
 --- !u!1 &7932615624116965148
@@ -25877,6 +26124,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4203007522036307051}
+  - {fileID: 448192066}
   - {fileID: 12759348300193905}
   - {fileID: 5415932425718123249}
   m_Father: {fileID: 5971693328757725718}
@@ -27017,229 +27265,3 @@ SceneRoots:
   - {fileID: 5960143583949042085}
   - {fileID: 2131647011}
   - {fileID: 6413716098072818163}
---- !u!1 &5125609870796515246
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 139751313046524419}
-  - component: {fileID: 5746032064859061743}
-  m_Layer: 0
-  m_Name: Collapsing Bridge 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &139751313046524419
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5125609870796515246}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 380235029}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5746032064859061743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5125609870796515246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41c3d7ecd760423a91df619abd47f61e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: MHK.Runtime::MHK.Race.CollapsingBridge
-  route: {fileID: 4238389303320376979}
-  gates:
-  - left: {x: -0.848, y: 0, z: -167.598}
-    right: {x: -1.752, y: 0, z: -162.484}
-  - left: {x: -16.578, y: 0, z: -170.496}
-    right: {x: -18.056, y: 0, z: -165.944}
-  - left: {x: -30.022, y: 0, z: -173.218}
-    right: {x: -31.318, y: 0, z: -168.698}
-  sideMargin: 1
-  heightRange: 3
-  triggerWait: 1
-  dropWait: 0.5
-  fallAcceleration: 153
-  fallDepth: 42.5
-  segments:
-  - piece: {fileID: 2495816406840297951}
-    delay: 1
-  - piece: {fileID: 744929752206141997}
-    delay: 0.83333
-  - piece: {fileID: 2885555430533823435}
-    delay: 0.76666
-  - piece: {fileID: 4392758618943601668}
-    delay: 0.63333
-  - piece: {fileID: 6760397959339757643}
-    delay: 0.63333
-  - piece: {fileID: 297015634935621334}
-    delay: 0.56666
-  - piece: {fileID: 1580137159335049391}
-    delay: 0.36666
-  - piece: {fileID: 3500887113140097582}
-    delay: 0.36666
-  - piece: {fileID: 393085809615074584}
-    delay: 0
-  - piece: {fileID: 3428719312937257811}
-    delay: 0.03333
-  - piece: {fileID: 4561268744372693489}
-    delay: 0.16666
-  - piece: {fileID: 1043629645876149321}
-    delay: 0.16666
-  - piece: {fileID: 7784965330913274218}
-    delay: 0.03333
-  - piece: {fileID: 1396461983885473952}
-    delay: 0.5
-  - piece: {fileID: 4682384271471636810}
-    delay: 0.6
-  - piece: {fileID: 3445161555325283863}
-    delay: 0.7
-  - piece: {fileID: 987027273922725805}
-    delay: 0.76666
-  - piece: {fileID: 6422295500518566009}
-    delay: 0.8
-  - piece: {fileID: 8647283601234916769}
-    delay: 0.86666
-  - piece: {fileID: 6521124812739767266}
-    delay: 1
-  - piece: {fileID: 2651808891949884852}
-    delay: 0.96666
-  sound: {fileID: 8300000, guid: 55e817fc5e55405f8e379fec20babe7f, type: 3}
-  soundVolume: 1
-  soundRange:
-    fullVolumeDistance: 40
-    fadeDistance: 300
-    minVolume: 0.5
-    fade:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
---- !u!1 &894510994803792449
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4709017792876389485}
-  - component: {fileID: 4377926901843743377}
-  m_Layer: 0
-  m_Name: Collapsing Bridge 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4709017792876389485
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 894510994803792449}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 380235029}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4377926901843743377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 894510994803792449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41c3d7ecd760423a91df619abd47f61e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: MHK.Runtime::MHK.Race.CollapsingBridge
-  route: {fileID: 3423028751471063463}
-  gates:
-  - left: {x: -164.872, y: 0, z: -195.694}
-    right: {x: -165.824, y: 0, z: -190.542}
-  - left: {x: -178.51, y: 0, z: -198.154}
-    right: {x: -179.284, y: 0, z: -193.588}
-  - left: {x: -194.416, y: 0, z: -201.268}
-    right: {x: -195.262, y: 0, z: -196.796}
-  sideMargin: 1
-  heightRange: 3
-  triggerWait: 1
-  dropWait: 0.5
-  fallAcceleration: 153
-  fallDepth: 42.5
-  segments:
-  - piece: {fileID: 677978399785628080}
-    delay: 1
-  - piece: {fileID: 5904185870887468563}
-    delay: 0.83333
-  - piece: {fileID: 4899992075259796553}
-    delay: 0.76666
-  - piece: {fileID: 4685002166257746462}
-    delay: 0.63333
-  - piece: {fileID: 5686049230883745249}
-    delay: 0.63333
-  - piece: {fileID: 5922654209546306662}
-    delay: 0.56666
-  - piece: {fileID: 5222175610609351329}
-    delay: 0.36666
-  - piece: {fileID: 6441423504750003896}
-    delay: 0.36666
-  - piece: {fileID: 1618925808120671264}
-    delay: 0
-  - piece: {fileID: 2882290706947446671}
-    delay: 0.03333
-  - piece: {fileID: 4832948419500240168}
-    delay: 0.16666
-  - piece: {fileID: 179823774904362828}
-    delay: 0.16666
-  - piece: {fileID: 9185497375963353781}
-    delay: 0.03333
-  - piece: {fileID: 4817470432146368724}
-    delay: 0.5
-  - piece: {fileID: 2089733012129360787}
-    delay: 0.6
-  - piece: {fileID: 8709271900499335795}
-    delay: 0.7
-  - piece: {fileID: 2543630512027385698}
-    delay: 0.76666
-  - piece: {fileID: 4726351123431421497}
-    delay: 0.8
-  - piece: {fileID: 2027992595861106152}
-    delay: 0.86666
-  - piece: {fileID: 328359131337040211}
-    delay: 1
-  - piece: {fileID: 3727348716530004548}
-    delay: 0.96666
-  sound: {fileID: 8300000, guid: 55e817fc5e55405f8e379fec20babe7f, type: 3}
-  soundVolume: 1
-  soundRange:
-    fullVolumeDistance: 40
-    fadeDistance: 300
-    minVolume: 0.5
-    fade:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4

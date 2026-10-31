@@ -18284,7 +18284,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1a03737872414e878537083a7b01cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: MHK.Runtime::MHK.Race.TrackRuntime
-  path: {fileID: 5427990286040592004}
   startGrid:
   - {fileID: 4154867859021020480}
   - {fileID: 4844719027371593521}
@@ -18298,8 +18297,6 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 4294963931
-  alternatePaths:
-  - {fileID: 8776128374428002504}
   farClip: 1000
   backgroundColor: {r: 0.4, g: 0.5922, b: 0.7333, a: 1}
 --- !u!33 &3243451195155735923
@@ -28016,7 +28013,7 @@ Transform:
   m_GameObject: {fileID: 2848140058918178705}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.27144048, z: -0, w: 0.9624553}
-  m_LocalPosition: {x: -23.26, y: -0.19, z: -140.76}
+  m_LocalPosition: {x: -23.26, y: -0.26, z: -140.49}
   m_LocalScale: {x: 0.99999994, y: 1, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -48036,9 +48033,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: MHK.Runtime::MHK.Race.TrackPath
   closed: 0
-  showOnMinimap: 1
+  showOnMinimap: 0
   nodes:
-  - position: {x: -220.111, y: 0, z: -94.484}
+  - position: {x: -218.49698, y: 0, z: -99.575714}
     width: 12.484
     flags: 0
   - position: {x: -227.138, y: 0, z: -94.103}
@@ -48134,20 +48131,17 @@ MonoBehaviour:
   - position: {x: -109.772, y: 0, z: -57.214}
     width: 5.018
     flags: 0
-  - position: {x: -97.585, y: 0, z: -60.847}
-    width: 27.812
+  - position: {x: -101.94588, y: 0, z: -60.847}
+    width: 9.061204
     flags: 0
-  - position: {x: -89.921, y: 0, z: -62.96}
-    width: 44.02
+  - position: {x: -95.42603, y: 0, z: -64.509285}
+    width: 13.979809
     flags: 0
   - position: {x: -87.874, y: 0, z: -68.071}
-    width: 50.702
-    flags: 0
-  - position: {x: -87.906, y: 0, z: -68.223}
-    width: 51.431
+    width: 16.725967
     flags: 0
   - position: {x: -76.777, y: 0, z: -78.605}
-    width: 27.622
+    width: 7.2308593
     flags: 0
 --- !u!33 &8785588519891347842
 MeshFilter:
@@ -49407,9 +49401,9 @@ Transform:
   m_GameObject: {fileID: 8753715908575855563}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.27144048, z: -0, w: 0.9624553}
-  m_LocalPosition: {x: -23.04, y: -0.0000083899495, z: -140.64}
+  m_LocalPosition: {x: -23.19, y: -0.28, z: -140.4}
   m_LocalScale: {x: 0.99999994, y: 1, z: 0.99999994}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4595566695966777199}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

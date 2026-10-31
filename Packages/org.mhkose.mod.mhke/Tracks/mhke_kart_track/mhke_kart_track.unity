@@ -17716,14 +17716,8 @@ MonoBehaviour:
   - position: {x: -121.276, y: 0, z: -203.567}
     width: 8
     flags: 0
-  - position: {x: -116.386, y: 0, z: -205.054}
-    width: 13.859
-    flags: 0
-  - position: {x: -114.393, y: 0, z: -203.152}
-    width: 11.213
-    flags: 0
-  - position: {x: -109.458, y: 0, z: -200.95}
-    width: 9.108
+  - position: {x: -115.067764, y: 0, z: -201.18182}
+    width: 7.5425
     flags: 0
   - position: {x: -105.388, y: 0, z: -198.857}
     width: 7.085
@@ -21209,9 +21203,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: MHK.Runtime::MHK.Race.TrackPath
   closed: 0
-  showOnMinimap: 1
+  showOnMinimap: 0
   nodes:
-  - position: {x: -113.762, y: 0, z: -248.189}
+  - position: {x: -111.63032, y: 0, z: -248.29907}
     width: 7.648
     flags: 0
   - position: {x: -111.546, y: 0, z: -240.015}
@@ -21232,13 +21226,7 @@ MonoBehaviour:
   - position: {x: -115.308, y: 0, z: -212.649}
     width: 3.84
     flags: 0
-  - position: {x: -116.475, y: 0, z: -209.712}
-    width: 7.123
-    flags: 0
-  - position: {x: -116.479, y: 0, z: -209.243}
-    width: 7.333
-    flags: 0
-  - position: {x: -116.386, y: 0, z: -205.054}
+  - position: {x: -116.41101, y: 0, z: -201.69789}
     width: 13.859
     flags: 0
 --- !u!4 &2976200735147152135
@@ -37299,9 +37287,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: MHK.Runtime::MHK.Race.TrackPath
   closed: 0
-  showOnMinimap: 1
+  showOnMinimap: 0
   nodes:
-  - position: {x: 73.151, y: 0, z: -107.826}
+  - position: {x: 73.190544, y: 0, z: -110.667755}
     width: 6.216
     flags: 0
   - position: {x: 64.876, y: 0, z: -110.299}
@@ -37346,13 +37334,16 @@ MonoBehaviour:
   - position: {x: 25.34, y: 0, z: -88.118}
     width: 3.265
     flags: 0
-  - position: {x: 25.094, y: 0, z: -87.334}
-    width: 3.714
-    flags: 0
   - position: {x: 25.144, y: 0, z: -86.998}
     width: 4.462
     flags: 0
-  - position: {x: 23.278, y: 0, z: -76.581}
+  - position: {x: 25.566353, y: 0, z: -84.39375}
+    width: 8.5372505
+    flags: 0
+  - position: {x: 21.875814, y: 0, z: -81.789505}
+    width: 10.883198
+    flags: 0
+  - position: {x: 12.408715, y: 0, z: -76.558}
     width: 20.763
     flags: 0
 --- !u!33 &6091434379425081597
@@ -43575,7 +43566,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1a03737872414e878537083a7b01cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: MHK.Runtime::MHK.Race.TrackRuntime
-  path: {fileID: 2312472466595427621}
   startGrid:
   - {fileID: 3191156902606882579}
   - {fileID: 9201214530244969704}
@@ -43589,9 +43579,6 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 4294963931
-  alternatePaths:
-  - {fileID: 6085534069156381605}
-  - {fileID: 2967837941328452563}
   farClip: 1000
   backgroundColor: {r: 0.0784, g: 0.6588, b: 0.8941, a: 1}
 --- !u!1 &7156855651838672256
