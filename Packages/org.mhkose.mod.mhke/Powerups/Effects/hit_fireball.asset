@@ -13,17 +13,12 @@ MonoBehaviour:
   m_Name: hit_fireball
   m_EditorClassIdentifier: MHK.Runtime::MHK.Modding.StatusEffectDefinition
   id: mhke.hit.fireball
-  displayName: Burnt
+  displayName: Boiling / Melted
   sourceGame: mhke
   icon: {fileID: 0}
   hidden: 0
-  reaction: {fileID: 11400000, guid: 7553c8db7c3b54b02af265829c3c9f3b, type: 2}
-  overrides:
-  - duration
-  - durationFromAnimation
-  - lockControls
-  - respawnBackDistance
-  - applySound
+  reaction: {fileID: 0}
+  overrides: []
   duration: 2.5
   durationFromAnimation: 0
   refreshOnReapply: 1
@@ -67,18 +62,18 @@ MonoBehaviour:
   verticalScale: 1
   auraEffect: {fileID: 0}
   auraRadius: 2
-  attachedVfxPrefab: {fileID: 5739532930821079632, guid: 14c1bc58385e046f5b0e1e8975c34dd5, type: 3}
-  attachToVisual: 0
+  attachedVfxPrefab: {fileID: 100000, guid: 48c369d5291242d9a0f679e1b898cd32, type: 3}
+  attachToVisual: 1
   attachMount: 3
   opacity: 1
-  useCharacterAnimation: 1
-  characterAnimation: 19
+  useCharacterAnimation: 0
+  characterAnimation: 0
   applySound: {fileID: 8300000, guid: b807b53b781f45798397461aa98d4028, type: 3}
   expiringSound: {fileID: 0}
   expiringSoundLead: 3
   endSound: {fileID: 0}
   screenOverlay: {r: 1, g: 1, b: 1, a: 0}
-  burnVisual: 1
+  burnVisual: 0
   modelTint: {r: 1, g: 1, b: 1, a: 0}
   hideWheels: 0
   bodyBob:
