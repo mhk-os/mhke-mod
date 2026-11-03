@@ -58,46 +58,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 3977247623529619059}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efc300cd88cf24c79a9fc6a6e0b5cf77, type: 3}
+  m_Script: {fileID: 11500000, guid: 80919f71dcf042b2a704c1a98a2e636f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: MHK.Runtime::MHK.Powerups.ProjectilePowerup
+  m_EditorClassIdentifier: MHK.Runtime::MHK.Powerups.TrackFireball
   soundVolume: 1
-  speed: 36.125
+  speed: 72.25
   lifetime: 30
-  deceleration: 0
   spawnDistance: 1.8
   worldMask:
     serializedVersion: 2
     m_Bits: 4294967295
   hitEffect: {fileID: 11400000, guid: a919256a467544f4e88fc89bf6f417b6, type: 2}
-  hitRadius: 1.2
+  hitRadius: 1
   launchSound: {fileID: 8300000, guid: 0e3a5e65eb23440dabfba3175b03dd9f, type: 3}
   flightLoop:
     clip: {fileID: 8300000, guid: dc67bd307b3f472ba7510a68379da77d, type: 3}
     volume: 1
-    minDistance: 1
-    maxDistance: 30
+    minDistance: 2
+    maxDistance: 60
   hitSound: {fileID: 0}
-  terrainSound: {fileID: 8300000, guid: 5b08708afda17484b9dc21740a8c14cf, type: 3}
-  expireSound: {fileID: 8300000, guid: 5b08708afda17484b9dc21740a8c14cf, type: 3}
-  ignoreOwnerSpeed: 0
+  terrainSound: {fileID: 0}
+  expireSound: {fileID: 0}
+  hoverHeight: 1.2
+  collisionRadius: 0.2
   ownerImmunity: 2
-  followGround: 1
-  hoverHeight: 0.59803545
-  wallBounces: 0
-  explodeOnProps: 1
-  followTrackPath: 1
-  pathLookAhead: 12
-  homing: 1
-  targetSelection: 1
-  homingArmDelay: 0
-  activationDistance: 20
-  lockDistance: 20
-  lockedSpeed: 36.125
-  turnRateDegrees: 360
-  respawnWaitDistance: 6
-  impactVfx: {fileID: 6030721521503554282, guid: f8b584bcf79a24d759a5be9735575085, type: 3}
-  bounceSound: {fileID: 0}
+  lookAhead: 3
+  turnRateDegrees: 900
+  visual: {fileID: 2346152406250227666}
+  spinDegreesPerSecond: 720
 --- !u!1 &4256122068895333027
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,9 +95,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2346152406250227666}
-  - component: {fileID: 7392456259214264414}
   m_Layer: 0
-  m_Name: pu_spikeball
+  m_Name: FireballVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,28 +110,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4256122068895333027}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.70710678, w: 0.70710678}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.20166667, y: 0.20166667, z: 0.20166667}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1354034802964730821}
   m_Father: {fileID: 8983475912905517829}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7392456259214264414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4256122068895333027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2d9bbd941fc0476a88b64b65780f5fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: MHK.Runtime::MHK.Effects.Spinner
-  degreesPerSecond: {x: 720, y: 0, z: 0}
-  space: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &6767550933501993039
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,13 +144,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6767550933501993039}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.015539969, y: -0.59803545, z: 0.0054743034}
+  m_LocalRotation: {x: 0, y: 0, z: -0.70710678, w: 0.70710678}
+  m_LocalPosition: {x: -0.6334099, y: 0.04948099, z: -0.03486079}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2346152406250227666}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!33 &3461192673606796208
 MeshFilter:
   m_ObjectHideFlags: 0
