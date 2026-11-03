@@ -22,7 +22,6 @@ MonoBehaviour:
   logo: {fileID: 2800000, guid: 7a8cb56aa90642bcb71fb15c5e6f2c48, type: 3}
   menuMusic: {fileID: 8300000, guid: 0280da579890f49258abdc6ac6864704, type: 3}
   uiClick: {fileID: 8300000, guid: 0c7623f08daea483997c9db12f28f387, type: 3}
-  sharedPowerups: []
   itemBoxLook:
     model: {fileID: 8215453993524380140, guid: a783c59365a46425c9e520dd5055cf8e, type: 3}
     spinSpeed: 0
@@ -55,12 +54,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a82980ed8d7fb4149a1766d6ba83b545, type: 2}
   - {fileID: 11400000, guid: db929c175b1fa4982855627c4ba2f94b, type: 2}
   - {fileID: 11400000, guid: b06a2388b76d54c11891e1a4bf0565d4, type: 2}
+  - {fileID: 11400000, guid: a919256a467544f4e88fc89bf6f417b6, type: 2}
   - {fileID: 11400000, guid: af15ce1078df44e87b1f3fcf3085b3bc, type: 2}
   - {fileID: 11400000, guid: 424ba8e4849574bb0bbd7a0d5a862117, type: 2}
   - {fileID: 11400000, guid: a51334c139bd14c3e9df7d1d4dc48bed, type: 2}
   - {fileID: 11400000, guid: 71a250cb098f54b639b8544c5d545f15, type: 2}
   - {fileID: 11400000, guid: 6dc40c0a02cb040dea18e3adae28d668, type: 2}
   - {fileID: 11400000, guid: db98a1ee966ed4c4080e942203efbf45, type: 2}
+  - {fileID: 11400000, guid: f0c08de2a351f4d15bf91aa2102116e4, type: 2}
   - {fileID: 11400000, guid: 30c27795cb9644f1b879af8f517457e6, type: 2}
   - {fileID: 11400000, guid: 3a803653c7d38401fb34b56324e10814, type: 2}
   - {fileID: 11400000, guid: 5e3e7974ae8c64da9b5eb8582de7837a, type: 2}
@@ -68,6 +69,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f58a249b7757145cb94ff32478f68680, type: 2}
   - {fileID: 11400000, guid: 3138e1cd289674f08bb88f8a3203222b, type: 2}
   - {fileID: 11400000, guid: ad44981ff97404a7989968b228511769, type: 2}
+  sdkApi: 0
   sdkVersion: 
   unityVersion: 
   buildTarget: 
