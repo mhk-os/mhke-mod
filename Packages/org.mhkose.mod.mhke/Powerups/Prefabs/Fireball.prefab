@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: MHK.Runtime::MHK.Powerups.TrackFireball
   soundVolume: 1
-  speed: 72.25
+  speed: 36.125
   lifetime: 30
   spawnDistance: 1.8
   worldMask:
@@ -84,6 +84,7 @@ MonoBehaviour:
   ownerImmunity: 2
   lookAhead: 3
   turnRateDegrees: 900
+  leaderSpeedShare: 0.325
   visual: {fileID: 2346152406250227666}
   spinDegreesPerSecond: 720
 --- !u!1 &4256122068895333027
