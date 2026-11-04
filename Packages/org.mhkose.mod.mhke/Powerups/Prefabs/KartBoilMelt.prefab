@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 748b17eb623e45f688a6f22589fce0c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: MHK.Runtime::MHK.Effects.KartMelt
-  meltCompletion: 0.56666667
+  meltCompletion: 0.28333333
   pooling: 0.9
   wobbleHeight: 0.025
   warmth: {r: 0.24, g: 0.055, b: 0.008, a: 1}
