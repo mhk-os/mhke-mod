@@ -6,7 +6,7 @@ Track proportions are corrected against the original games' road widths and lap 
 
 ## Fireball
 
-The fireball floats above the road and spins upright like a kart, not end over end. Its local-X spin pivot is oriented upright, with the mesh counter-rotated to retain its neutral pose. The visual uses scale 0.2016667: the previous 0.275 increased by 10%, then divided by 1.5. Its straight-line chase speed is 36.125 m/s, half the previous 72.25 m/s. The flight sound has a 2 m minimum distance and 60 m maximum distance.
+The fireball floats above the road and spins upright like a kart, not end over end. Its local-X spin pivot is oriented upright, with the mesh counter-rotated to retain its neutral pose. The visual uses scale 0.40333334, twice the previous 0.20166667, without changing its flight or collision tuning. Its straight-line chase speed is 36.125 m/s, half the previous 72.25 m/s. The flight sound has a 2 m minimum distance and 60 m maximum distance.
 
 It launches forwards even while looking backwards, then drives the main path and alternative routes toward the current race leader, including its owner after the initial two-second immunity. Steering projects onto the solved drivable line and advances the look-ahead in world metres, preventing orbiting where raw track distances bunch up at Luna's kinks. Route handovers follow the smoothed road geometry rather than waiting to cross raw path-node planes. Solid walls stop or deflect its movement without destroying it; other fireballs do not block it, and its lifetime remains 30 seconds.
 
