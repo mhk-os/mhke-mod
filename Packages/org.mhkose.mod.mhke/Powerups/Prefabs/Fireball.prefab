@@ -70,6 +70,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   hitEffect: {fileID: 11400000, guid: a919256a467544f4e88fc89bf6f417b6, type: 2}
   endVfx: {fileID: 4878780223240188328, guid: 6256ebc8cca74c66b244500f1665b350, type: 3}
+  impactVfx: {fileID: 100000, guid: 63d6944695ce419f991e012ee3c02cdf, type: 3}
   hitRadius: 1
   launchSound: {fileID: 8300000, guid: 0e3a5e65eb23440dabfba3175b03dd9f, type: 3}
   flightLoop:
@@ -84,13 +85,20 @@ MonoBehaviour:
   collisionRadius: 0.2
   lookAhead: 3
   turnRateDegrees: 900
+  launchSteeringTime: 0.3
+  launchTurnRateDegrees: 180
+  wallPauseTime: 0.14
+  wallRecoveryTime: 0.35
   leaderSlowDistance: 4
   leaderSpeedShare: 0.95
   selfTargetDelay: 1
   pursuitDriftWidth: 0.65
   pursuitDriftPeriod: 2.4
+  leaderInterceptDistance: 10.625
+  leaderInterceptTurnRate: 2700
   waitingCreepSpeed: 3
   waitingNearSpeedShare: 0.85
+  waitingPressDistance: 12.75
   waitingPulsePeriod: 0.5
   waitingPulseDuration: 0.2
   visual: {fileID: 2346152406250227666}

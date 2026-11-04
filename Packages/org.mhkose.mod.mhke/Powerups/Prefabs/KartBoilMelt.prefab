@@ -47,6 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: MHK.Runtime::MHK.Effects.KartMelt
   meltCompletion: 0.28333333
   pooling: 0.9
+  flattenedScale: 0.6666667
+  groundClearance: 0.02
   wobbleHeight: 0.025
   warmth: {r: 0.24, g: 0.055, b: 0.008, a: 1}
   boilingVfxPrefab: {fileID: 5739532930821079632, guid: d77cfac6746b447fba7729f1c2e589bf, type: 3}
