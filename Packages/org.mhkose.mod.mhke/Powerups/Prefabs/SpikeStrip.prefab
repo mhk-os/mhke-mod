@@ -453,7 +453,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   activateOnLanding:
   - {fileID: 5746641328205300152}
-  landSound: {fileID: 0}
+  landSound: {fileID: 8300000, guid: ea975177754744948b7fbc8efa3e7b7c, type: 3}
 --- !u!114 &5746641328205300152
 MonoBehaviour:
   m_ObjectHideFlags: 0

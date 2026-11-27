@@ -49,5 +49,5 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   aiUsage: 3
-  useSound: {fileID: 8300000, guid: 8e4a2c1b9d3f4a7eb6c05d2f1a9e7c34, type: 3}
+  useSound: {fileID: 8300000, guid: 43d52b85a14f4a128591a3d43f78443b, type: 3}
   family: hammer
