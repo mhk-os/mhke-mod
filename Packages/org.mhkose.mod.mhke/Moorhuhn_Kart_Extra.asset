@@ -31,6 +31,8 @@ MonoBehaviour:
   engineLoop: {fileID: 8300000, guid: ca420209b4c3b49fb84973ebfb200ebc, type: 3}
   skidLoop: {fileID: 8300000, guid: 065d53c30a9ad4c84a360166a89463c8, type: 3}
   crashSound: {fileID: 8300000, guid: ebe3f2a6a93f74ea0851a8c1c756b86a, type: 3}
+  respawnSound: {fileID: 8300000, guid: dce0b4f4549641b68041fbb24f8b6d12, type: 3}
+  fallSound: {fileID: 8300000, guid: 5b2d7460f1514947b7173c44ce647ab5, type: 3}
   landSound: {fileID: 0}
   countdownSound: {fileID: 0}
   goSound: {fileID: 0}

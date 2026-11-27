@@ -71,7 +71,7 @@ MonoBehaviour:
     minDistance: 1
     maxDistance: 30
   bounceSound: {fileID: 0}
-  landSound: {fileID: 0}
+  landSound: {fileID: 8300000, guid: 63bb41810cf94cda9bfb3c099aad6a25, type: 3}
   failSound: {fileID: 0}
 --- !u!114 &6026205997567828145
 MonoBehaviour:

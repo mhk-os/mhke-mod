@@ -264,7 +264,7 @@ MonoBehaviour:
   maxHeightDifference: 2.5
   splashRadius: 1.5
   effect: {fileID: 11400000, guid: d5c36526994af45758a67bb74bb29642, type: 2}
-  hitSound: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 5be510e128ef34ad9b10700869199f57, type: 3}
   missSound: {fileID: 8300000, guid: 5be510e128ef34ad9b10700869199f57, type: 3}
   impactVfx: {fileID: 0}
 --- !u!1 &2787428339270377309

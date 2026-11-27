@@ -162,7 +162,7 @@ MonoBehaviour:
     volume: 1
     minDistance: 1
     maxDistance: 30
-  hitSound: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 5b08708afda17484b9dc21740a8c14cf, type: 3}
   terrainSound: {fileID: 8300000, guid: 5b08708afda17484b9dc21740a8c14cf, type: 3}
   expireSound: {fileID: 8300000, guid: 5b08708afda17484b9dc21740a8c14cf, type: 3}
   soundVolume: 1
